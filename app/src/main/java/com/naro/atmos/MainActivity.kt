@@ -37,7 +37,7 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import java.util.Locale
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
-import kotlin.coroutines.isActive
+import kotlinx.coroutines.isActive
 
 private val Background = Color(0xFF080F1D)
 private val Panel = Color(0xFF121F32)
