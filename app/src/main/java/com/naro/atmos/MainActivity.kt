@@ -9,6 +9,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
@@ -218,21 +220,11 @@ private fun AtmosApp() {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Column {
-                Text(
-                    "ATMOS",
-                    color = White,
-                    fontSize = 27.sp,
-                    fontWeight = FontWeight.Bold,
-                    letterSpacing = 3.sp
-                )
-                Text(
-                    "WEATHER, REIMAGINED",
-                    color = Muted,
-                    fontSize = 10.sp,
-                    letterSpacing = 2.sp
-                )
-            }
+            Image(
+                painter = painterResource(id = R.drawable.atmos_logo),
+                contentDescription = "ATMOS logo",
+                modifier = Modifier.size(76.dp)
+            )
 
             TextButton(onClick = { fahrenheit = !fahrenheit }) {
                 Text(
